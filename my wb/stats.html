@@ -1,0 +1,42 @@
+<html>
+        <head>
+                <script src="script.js"></script>
+                <link rel="stylesheet" href="styles.css">
+        </head>
+    <body>  
+          <iframe src="menu.html" style="width:100%; height:100px;">
+                
+        </iframe>
+       <font size="50">
+      <ul> 
+        <li> Height: as tall as a 6 foot tree  </li>
+        <li> IQ: too high  </li>
+        <li> Gpa: 3.70</li>
+    <li>Favorite Color: Green</li>
+    <li>Adress: 4218 S Uiversity Rd </li>
+        <li>     Age: <span id="seconds-old"></span> seconds old
+    <script>
+        function updateSeconds() {
+            // Set your birthday here: Year, Month (0-11), Day, Hour, Min, Sec
+            const birthDate = new Date(2008, 8, 25, 6, 15, 0); 
+            const now = new Date();
+            
+            // Calculate difference in milliseconds, then convert to seconds
+            const diffInSeconds = Math.floor((now - birthDate) / 1000);
+            
+            document.getElementById("seconds-old").innerText = diffInSeconds.toLocaleString();
+        }
+
+        // Update every second
+        setInterval(updateSeconds, 1000);
+        
+        // Initial call
+        updateSeconds();
+    </script></li>
+      </ul> 
+    </font>
+        
+</body> 
+
+
+</html>
